@@ -19,3 +19,5 @@ def largestPalindromeProduct(range: Range, secondRange: Range): Int = {
 }
 largestPalindromeProduct(10 to 99, 10 to 99)
 largestPalindromeProduct(100 to 999, 100 to 999)
+largestPalindromeProduct(9500 to 9999, 9500 to 9999)
+largestPalindromeProduct(99000 to 99999,99000 to 99999)
