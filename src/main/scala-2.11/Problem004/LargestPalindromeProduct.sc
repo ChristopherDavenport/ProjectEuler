@@ -4,7 +4,18 @@
   *
   * Find the largest palindrome made from the product of two 3-digit numbers.
 **/
-  {for ( a <- 100 to 999; b <- 100 to 999) yield a * b}.filter(
+//  {for ( a <- 900 to 999; b <- 900 to 999) yield a * b}.filter(
+//    number =>
+//      number.toString == number.toString.reverse
+//  ) max
+
+def largestPalindromeProduct(range: Range, secondRange: Range): Int = {
+  {for ( a <- range; b <- range)
+    yield a * b
+  }.filter{
     number =>
       number.toString == number.toString.reverse
-  ) max
+  } max
+}
+largestPalindromeProduct(10 to 99, 10 to 99)
+largestPalindromeProduct(100 to 999, 100 to 999)
