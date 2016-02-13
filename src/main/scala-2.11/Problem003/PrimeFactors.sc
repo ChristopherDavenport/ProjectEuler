@@ -1,4 +1,4 @@
-import BigInt._
+//import BigInt._
 //def result(number: BigInt, list: List[BigInt] = List()): List[BigInt] = {
 //
 //  for(n <- BigInt(2) to number if number % n == 0) {
@@ -22,7 +22,6 @@ import BigInt._
 //}
 //
 //result(BigInt(600851475143L))
-
 def largestPrimeFactor(bigNumber : BigInt) = {
   def loop(small:BigInt, large: BigInt): BigInt =
     if (small == large) large else // If the first number is equal to the second number -> answer!
