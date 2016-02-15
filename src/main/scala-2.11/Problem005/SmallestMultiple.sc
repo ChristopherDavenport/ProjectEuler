@@ -19,7 +19,10 @@ def smallestMultiple(divisibleBy: Range): Int = {
 
   returnSmallest(Range(divisibleBy.max, Int.MaxValue, divisibleBy.max), divisibleBy)
 }
+
 smallestMultiple(1 to 10)
 smallestMultiple(1 to 15)
 smallestMultiple(1 to 20)
+
+val range = 1 to 20
 
