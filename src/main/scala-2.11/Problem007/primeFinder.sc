@@ -23,5 +23,4 @@ def primeFinder(prime: Int, num: Int = 2, primeCount: Int = 0): Int = {
   else primeFinder(prime, num + 1, if(isPrime(num)) primeCount+1 else primeCount)
 }
 
-primeFinder(6) == 13
 primeFinder(10001)
