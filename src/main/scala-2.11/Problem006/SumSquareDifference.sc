@@ -16,12 +16,15 @@
 import math.abs
 
 def sumSquareDifference(range: Range): Int = {
+
   def sumOfSquares(r: Range): Int = {
     r.map(r => r * r).sum
   }
+
   def squareOfSum(r: Range): Int = {
     range.sum * range.sum
   }
+
   abs(sumOfSquares(range)- squareOfSum(range))
 }
 
