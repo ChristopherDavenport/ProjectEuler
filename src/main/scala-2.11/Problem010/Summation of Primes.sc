@@ -41,7 +41,7 @@ def sumPrimes(primes: Long,                     // How many to take
 
   // Check list
   case _ =>
-    val possibleDenoms = primeList.dropWhile(_ >= Math.sqrt(start))
+    val possibleDenoms = primeList.dropWhile(a => a * a >= start)
     val denomCheck = for (denom <- possibleDenoms) yield start % denom
     if (denomCheck.product != 0) {
       sumPrimes(primes, start + 1, start :: primeList)
@@ -51,12 +51,10 @@ def sumPrimes(primes: Long,                     // How many to take
     }
 
 }
-
-//sumPrimes(100)
-
-val primes: Stream[Int] =
-  2 #:: Stream.from(3, 2).filter(
-    i => primes.takeWhile(
-      j => j * j <= i).forall(
-      k => i % k > 0)
-  )
+sumPrimes(2000000)
+//val primes: Stream[Int] =
+//  2 #:: Stream.from(3, 2).filter(
+//    i => primes.takeWhile(
+//      j => j * j <= i).forall(
+//      k => i % k > 0)
+//  )
